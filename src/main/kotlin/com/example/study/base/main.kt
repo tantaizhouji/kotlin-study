@@ -1,5 +1,5 @@
-package com.example.study
+package com.example.study.base
 
-fun main(args: Array<String>) {
+fun main() {
     println("Hello World!")
 }

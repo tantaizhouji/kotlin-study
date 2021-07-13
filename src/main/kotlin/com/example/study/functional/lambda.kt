@@ -1,5 +1,7 @@
 package com.example.study.functional
 
+import java.util.*
+
 fun main() {
     val upperCase1: (String) -> String = { str: String -> str.uppercase() }
 
@@ -12,7 +14,7 @@ fun main() {
 
     val upperCase5: (String) -> String = { it.uppercase() }
 
-    val upperCase6: (String) -> String = String::toUpperCase
+    val upperCase6: (String) -> String = { s: String -> s.uppercase() }
 
     println(upperCase1("hello"))
     println(upperCase2("hello"))

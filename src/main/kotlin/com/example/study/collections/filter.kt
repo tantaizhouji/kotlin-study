@@ -31,4 +31,39 @@ fun main() {
     val noneGT6 = numbers.none { it > 6 }
     println(allNone)
     println(noneGT6)
+
+    // first,last
+    val first = numbers.first()
+    val last = numbers.last()
+    println(first)
+    println(last)
+
+    val firstEven = numbers.first { it % 2 == 0 }
+    val lastOdd = numbers.last { it % 2 != 0 }
+    println(firstEven)
+    println(lastOdd)
+
+    // firstOrNull,lastOrNull
+    val words = listOf("foo", "bar", "baz", "faz")
+    val empty = emptyList<String>()
+
+    val firstNull = empty.firstOrNull()
+    val lastNull = empty.lastOrNull()
+    println(firstNull)
+    println(lastNull)
+
+    val firstF = words.firstOrNull { it.startsWith('f') }
+    val firstZ = words.firstOrNull { it.startsWith('z') }
+    val lastF = words.lastOrNull { it.endsWith('f') }
+    val lastZ = words.lastOrNull { it.endsWith('z') }
+    println(firstF)
+    println(firstZ)
+    println(lastF)
+    println(lastZ)
+
+    // count
+    val totalCount = numbers.count()
+    val evenCount = numbers.count { it % 2 == 0 }
+    println(totalCount)
+    println(evenCount)
 }
